@@ -111,9 +111,9 @@
         (colir-compose-method #'colir-compose-soft-light))
     (cl-mapc (lambda (f1 f2)
               (let* ((bg (face-background f1))
-+                      (bg-parsed (colir-color-parse bg)))
-+                 (if (not bg-parsed)
-+                     (message ">>> %s" bg)
+                      (bg-parsed (colir-color-parse bg)))
+                 (if (not bg-parsed)
+                     (message ">>> %s" bg)
                    (set-face-background
                     f2
                     (colir-blend
